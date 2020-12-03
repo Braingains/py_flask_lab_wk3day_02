@@ -1,23 +1,41 @@
 
-
 <html>
     <head>
-        <title>{{ title }} My To-Do-List</title>
+        <title>{{ title }} My Events List</title>
 
     </head>
+    <body>
+        <h1>My Event List</h1>
+        <form action="/add_event" method="post"> 
+            <label for="title">Event Name</label>
+            <input type="text" name="title" id="title">
+            <label for="description">Description</label>
+            <textarea name="description" rows="2" cols="30"></textarea>
+            <input type="submit" value="Add Event">
+          </form>
+
+        {% for event in events %}
+        <div>
+            <p>
+                {{event.name_of_event}} : {{event.description}}
+            </p>
+        </div>
+        {% endfor %}
+
+
+    </body>
+</html>
+
+
+<!-- <html>
+    
 
     <body>
         {% extends "base.html" %}
 
         {% block content%}
         <h1>My To Do List!</h1>
-        <form action="/add-task" method="post"> <!-- ADDED -->
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title">
-            <label for="description">Description</label>
-            <textarea name="description" rows="2" cols="30"></textarea>
-            <input type="submit" value="Add Task">
-          </form>
+        
         {% for task in tasks %}
             <div>
                 <p>
@@ -33,4 +51,4 @@
         
     
     </body>
-</html>
+</html> --> 

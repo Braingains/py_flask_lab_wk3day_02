@@ -2,8 +2,8 @@ from app.models.event import *
 
 
 
-event1 = Event("3/10/2020", "EventLab", 2, "GreenRoom", "MentalExercise")
-event2 = Event("26/1/2021", "21st Birthday", 20, "Deluxe Room", "Celebration")
+event1 = Event("EventLab", "MentalExercise")
+event2 = Event("21st Birthday", "Celebration")
 events = [event1, event2]
 
 
