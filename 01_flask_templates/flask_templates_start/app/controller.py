@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template, request
-from app.models.todo_list import tasks, add_new_task
-from app.models.task import *
+from app.models.events_list import events, add_new_event
+from app.models.event import *
 
 @app.route('/')
 def index():

@@ -6,3 +6,7 @@ class Event():
         self.number_of_guests = number_of_guests
         self.room_location = room_location
         self.decription = description
+
+    #list all events
+
+    #create an event in the event planner
